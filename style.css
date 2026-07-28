@@ -1,55 +1,595 @@
-/* ========================= */
-/* Social Buttons */
-/* ========================= */
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-.social-buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
 }
 
-.social-buttons .btn {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #00e5ff;
-    color: #002b36;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+body{
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
 }
 
-.social-buttons .btn:hover {
-    background: white;
-    color: #000;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,229,255,0.4);
+/* =========================
+   CONTAINER
+========================= */
+
+section{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 0;
 }
 
-/* ========================= */
-/* Contact Links */
-/* ========================= */
+/* =========================
+   HERO
+========================= */
 
-.contact a {
-    color: #00e5ff;
-    text-decoration: none;
-    font-weight: bold;
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
 }
 
-.contact a:hover {
-    color: white;
+.hero-text{
+    flex:1;
 }
 
-/* ========================= */
-/* Footer */
-/* ========================= */
+.hero h1{
+    font-size:55px;
+    color:#0f172a;
+    margin-bottom:15px;
+}
 
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    color: #ddd;
-    border-top: 1px solid rgba(255,255,255,0.2);
+.hero h2{
+    font-size:28px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#555;
+    max-width:600px;
+    margin-bottom:30px;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:370px;
+    height:370px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    transition:.4s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.btn{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    margin:10px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+button:hover,
+.btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 20px rgba(37,99,235,.3);
+
+}
+
+.social-buttons{
+
+    margin-top:25px;
+
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.about h2{
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+    color:#0f172a;
+
+}
+
+.about p{
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+section h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:38px;
+
+    color:#0f172a;
+
+}
+/* =========================
+   SKILLS
+========================= */
+
+.skills{
+    text-align:center;
+}
+
+.skills div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+.skills span{
+
+    background:#2563eb;
+    color:#fff;
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(37,99,235,.2);
+
+}
+
+.skills span:hover{
+
+    background:#1d4ed8;
+    transform:translateY(-5px) scale(1.05);
+
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+
+}
+
+.project-card{
+
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+
+}
+
+.project-card h3{
+
+    color:#2563eb;
+    margin-bottom:15px;
+
+}
+
+.project-card p{
+
+    color:#555;
+    font-size:16px;
+
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+
+    text-align:center;
+    background:#ffffff;
+    border-radius:20px;
+    padding:60px 30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.contact p{
+
+    font-size:18px;
+    margin:15px 0;
+
+}
+
+.contact a{
+
+    color:#2563eb;
+    font-weight:600;
+    text-decoration:none;
+
+}
+
+.contact a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    margin-top:80px;
+    font-size:15px;
+
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.project-card,
+.about,
+.skills span,
+button,
+.btn{
+
+    transition:all .35s ease;
+
+}
+
+.hero h1{
+
+    animation:slideDown 1s ease;
+
+}
+
+.hero p{
+
+    animation:fadeIn 1.5s ease;
+
+}
+
+@keyframes slideDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:60px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .hero p{
+        margin:20px auto;
+    }
+
+    .hero-image img{
+        width:280px;
+        height:280px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    section{
+        width:92%;
+        padding:60px 0;
+    }
+
+    .about{
+        padding:30px;
+    }
+
+    .project-card{
+        padding:25px;
+    }
+
+    .skills span{
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+    button,
+    .btn{
+        width:100%;
+        margin:10px 0;
+        text-align:center;
+    }
+
+    .social-buttons{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-image img{
+        width:220px;
+        height:220px;
+    }
+
+}
+
+/* =========================
+   HERO IMAGE GLOW
+========================= */
+
+.hero-image img{
+
+    box-shadow:
+    0 0 20px rgba(37,99,235,.35),
+    0 0 45px rgba(124,58,237,.25);
+
+    animation:floatImage 4s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   GRADIENT BACKGROUND
+========================= */
+
+body{
+
+    background:
+    linear-gradient(
+        135deg,
+        #eef4ff 0%,
+        #f8fbff 50%,
+        #eef7ff 100%
+    );
+
+}
+
+/* =========================
+   CUSTOM SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e5e7eb;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* =========================
+   TEXT SELECTION
+========================= */
+
+::selection{
+
+    background:#2563eb;
+    color:#fff;
+
+}
+
+/* =========================
+   SMOOTH CARD HOVER
+========================= */
+
+.about:hover,
+.contact:hover,
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =========================
+   OPTIONAL DARK MODE
+========================= */
+
+body.dark{
+
+    background:#0f172a;
+    color:#f8fafc;
+
+}
+
+body.dark .about,
+body.dark .project-card,
+body.dark .contact{
+
+    background:#1e293b;
+    color:#f8fafc;
+
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3{
+
+    color:#ffffff;
+
+}
+
+body.dark p{
+
+    color:#d1d5db;
+
+}
+
+body.dark footer{
+
+    background:#020617;
+
 }

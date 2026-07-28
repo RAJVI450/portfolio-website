@@ -242,3 +242,34 @@ section h2 {
     }
 
 }
+.project-card {
+
+    background: rgba(255,255,255,0.1);
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:15px;
+
+    transition:0.3s;
+
+}
+
+
+.project-card:hover {
+
+    transform:scale(1.05);
+
+    border:1px solid #00e5ff;
+
+}
+
+
+.project-card h3 {
+
+    color:#00e5ff;
+
+    margin-bottom:10px;
+
+}
